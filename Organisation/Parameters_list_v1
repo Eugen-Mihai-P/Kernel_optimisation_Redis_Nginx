@@ -1,0 +1,41 @@
+General setup
+    • Compression mode
+    • Preemption model
+    • High Resolution Timer Support
+    • Control Group support → Group CPU scheduler
+        ◦ CPU bandwidth provisioning for FAIR_GROUP_SCHED
+    • RCU Subsystems
+        ◦  Real-time priority to use for RCU worker threads (integer)
+
+
+Device drivers
+    • DMA engine support
+
+
+Power management and ACPI options
+    • Default CPUFreq governor
+    • CPU frequency translation statistics
+    • Suspend to RAM and standby
+        ◦ Hybernation
+        ◦ Opportunistic sleep
+
+
+Processor type and features
+    • Live patching
+    • Timer frequency
+    • Contiguous Memory Allocator
+    • Allow for memory compaction
+    • Enable KSM for page merging
+    • Amount of low memory, in kilobytes, to reserve for the BIOS
+    • Sparse Memory virtual memmap
+    • Single-depth WCHAN output
+
+
+File systems
+    • Check support for ext4 or btrfs
+    • General filesystem local caching manager
+    • Network file systems: 
+
+
+Block layer
+    • I/O scheduler
