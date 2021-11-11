@@ -1,4 +1,4 @@
-General setup
+- General setup
     - Compression mode
     - Enable process_vm_readv/writev syscalls
     - Timers subsystem
@@ -23,12 +23,12 @@ General setup
     - Stack protector buffer overflow protection
 
 
-Enable the block layer
+- Enable the block layer
     - IO Schedulers
         - Default I/O scheduler
 
 
-Processor type and features
+- Processor type and features
     - Single depth WCHAN output
     - Processor family
     - SMT (Hyperthreading) scheduler support
@@ -41,7 +41,7 @@ Processor type and features
     - Timer frequency
 
 
-Power management and ACPI options
+- Power management and ACPI options
     - Enable workqueue power-efficient mode by default
     - CPU frequency scaling
         - Default CPUFreq governor
@@ -53,5 +53,5 @@ Power management and ACPI options
 (Let's scope out drivers, network and filesystems for now. For network and
 filesystem I assume most options can be changed at runtime)
 
-Kernel Hacking
+- Kernel Hacking
     - Set upper limit of TLB entries to flush one-by-one
