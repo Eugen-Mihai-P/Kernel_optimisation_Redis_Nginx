@@ -1,0 +1,103 @@
+// Default values included
+
+/proc/sys/kernel
+
+kernel.sem = 32000	1024000000	500	32000
+kernel.shmall = 18446744073692774399
+kernel.shmmax = 18446744073692774399
+kernel.shmmni = 4096
+
+
+// for different cpuN.domainN
+kernel.sched_domain.cpu0.domain0.busy_factor = 32
+kernel.sched_domain.cpu0.domain0.busy_idx = 0
+kernel.sched_domain.cpu0.domain0.cache_nice_tries = 0
+kernel.sched_domain.cpu0.domain0.flags = 4783
+kernel.sched_domain.cpu0.domain0.forkexec_idx = 0
+kernel.sched_domain.cpu0.domain0.idle_idx = 0
+kernel.sched_domain.cpu0.domain0.imbalance_pct = 110
+kernel.sched_domain.cpu0.domain0.max_interval = 4
+kernel.sched_domain.cpu0.domain0.max_newidle_lb_cost = 13231
+kernel.sched_domain.cpu0.domain0.min_interval = 2
+kernel.sched_domain.cpu0.domain0.name = SMT
+kernel.sched_domain.cpu0.domain0.newidle_idx = 0
+kernel.sched_domain.cpu0.domain0.wake_idx = 0
+
+
+kernel.sched_latency_ns = 24000000
+kernel.sched_migration_cost_ns = 500000
+kernel.sched_min_granularity_ns = 3000000
+kernel.sched_nr_migrate = 32
+
+kernel.sched_rr_timeslice_ms = 100
+kernel.sched_rt_period_us = 1000000
+kernel.sched_rt_runtime_us = 950000
+kernel.sched_schedstats = 0
+kernel.sched_tunable_scaling = 1
+
+kernel.numa_balancing = 0
+kernel.numa_balancing_scan_delay_ms = 1000
+kernel.numa_balancing_scan_period_max_ms = 60000
+kernel.numa_balancing_scan_period_min_ms = 1000
+kernel.numa_balancing_scan_size_mb = 256
+
+
+
+/proc/sys/net
+
+net.core.dev_weight = 64
+
+net.core.optmem_max = 20480
+net.core.rmem_default = 212992
+net.core.rmem_max = 212992
+net.core.wmem_default = 212992
+net.core.wmem_max = 212992
+net.core.netdev_budget = 300
+net.core.netdev_budget_usecs = 8000
+net.core.netdev_max_backlog = 1000
+
+
+
+/proc/sys/net/ipv4
+
+net.ipv4.icmp_msgs_per_sec = 1000
+net.ipv4.icmp_ratelimit = 1000
+net.ipv4.icmp_ratemask = 6168
+
+net.ipv4.tcp_min_rtt_wlen = 300
+net.ipv4.route.max_size = 2147483647
+net.ipv4.route.redirect_load = 5
+net.ipv4.route.redirect_number = 9
+net.ipv4.route.redirect_silence = 5120
+net.ipv4.tcp_retries1 = 3
+net.ipv4.tcp_retries2 = 15
+
+
+
+/proc/sys/net/ipv6
+
+net.ipv6.bindv6only = 0
+net.ipv6.ip6frag_high_thresh = 4194304
+net.ipv6.ip6frag_low_thresh = 3145728
+
+net.ipv6.ip6frag_time = 60
+net.ipv6.conf.default.accept_source_route = 0 // and remaining accept_source_route
+net.ipv6.conf.default.mtu = 1280 // and remaining ".mtu" options
+
+
+
+/proc/sys/vm
+
+vm.extfrag_threshold = 500
+vm.swappines = 60
+vm.nr_hugepages = 0
+vm.nr_hugepages_mempolicy = 0
+vm.nr_overcommit_hugepages = 0
+
+
+
+/proc/sys/fs
+
+fs.nr_open = 1048576
+fs.file-max = 9223372036854775807
+fs.file-nr = 9312	0	9223372036854775807
