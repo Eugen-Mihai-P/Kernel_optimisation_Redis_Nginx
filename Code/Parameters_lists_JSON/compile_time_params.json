@@ -1,0 +1,270 @@
+{
+	"CONFIG_KERNEL_CompType":{
+		
+		"name":"", 
+		"type":"",
+		"value": "",
+		"default":"",
+	
+		"CONFIG_KERNEL_GZIP": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_KERNEL_BZIP2": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_KERNEL_LZMA": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_KERNEL_XZ": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_KERNEL_LZO": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_KERNEL_LZ4": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_KERNEL_LZ4": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_KERNEL_ZSTD": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		}
+	},
+	
+	"CONFIG_PREEMPT":{
+	
+		"CONFIG_PREEMPT_NONE": {
+			"name":"", 
+			"type":"",
+			"default":""
+		},
+		
+		"CONFIG_PREEMPT_VOLUNTARY": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_PREEMPT": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		}
+
+	},
+	
+	"CONFIG_PREEMPT_DYNAMIC": {
+		"name":"", 
+		"type":"",
+		"value": "",
+		"default":""
+	},
+	
+	
+	"CONFIG_CROSS_MEMORY_ATTACH": {
+		"name":"", 
+		"type":"",
+		"value": "",
+		"default":""
+	},
+	
+	"Timers_subsystem": {
+		
+		"Tick_handling": {
+			"CONFIG_HZ_PERIODIC": {
+				"name":"", 
+				"type":"",
+				"value": "",
+				"default":""
+			},
+			
+			"CONFIG_NO_HZ_IDLE": {
+				"name":"", 
+				"type":"",
+				"value": "",
+				"default":""
+			},
+			
+			"CONFIG_NO_HZ_FULL": {
+				"name":"", 
+				"type":"",
+				"value": "",
+				"default":""
+			}
+		},
+		
+		"CONFIG_NO_HZ": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_HIGH_RES_TIMERS": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		}
+		
+	},
+	
+	"CONFIG_RCU_EXPERT": {
+		"name":"", 
+		"type":"",
+		"value": "",
+		"default":"",
+		
+		"CONFIG_RCU_FANOUT": {
+			"name":"",
+			"type":"",
+			"value": "",
+			"default":"",
+			"range": [2, 64]
+		},
+		
+		"CONFIG_RCU_FANOUT_LEAF": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":"",
+			"range": [2, 64]
+		},
+		
+		"CONFIG_RCU_FAST_NO_HZ": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_RCU_BOOST": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_RCU_NOCB_CPU": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		}
+	},
+	
+	"SLUB_allocator": {
+		"CONFIG_SLAB": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_SLUB": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_SLOB": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		}
+	},
+	
+	"CONFIG_SLUB_CPU_PARTIAL": {
+		"name":"", 
+		"type":"",
+		"value": "",
+		"default":""
+	},
+	
+	"Timer_frequency": {
+		"CONFIG_HZ_100": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_HZ_250": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_HZ_300": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		},
+		
+		"CONFIG_HZ_1000": {
+			"name":"", 
+			"type":"",
+			"value": "",
+			"default":""
+		}
+	},
+	
+	"CONFIG_SCHED_OMIT_FRAME_POINTER": {
+		"name":"", 
+		"type":"",
+		"value": "",
+		"default":""
+	},
+	
+	"CONFIG_SCHED_MC": {
+		"name":"", 
+		"type":"",
+		"value": "",
+		"default":""
+	},
+	
+	"CONFIG_JUMP_LABEL": {
+		"name":"", 
+		"type":"",
+		"value": "",
+		"default":""
+	}
+}

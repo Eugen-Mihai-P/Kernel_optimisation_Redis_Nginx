@@ -1,0 +1,266 @@
+{	
+	"filesystem":{
+		"fs.nr_open": {
+			"name":"fs.nr_open",
+			"type":"int"		
+		},
+		
+		"fs.file-max": {
+			"name":"fs.file-max",
+			"type":"int"		
+		},
+		
+		"fs.file-nr": {
+			"name":"fs.file-nr",
+			"type":"list"		
+		}
+	},
+	
+	"kernel":{
+		"kernel.sem": {
+			"name":"kernel.sem",
+			"type":"list"	
+		},
+		
+		"kernel.shmall": {
+			"name":"kernel.shmall",
+			"type":"double"
+		},
+		
+		"kernel.shmmax": {
+			"name":"kernel.shmmax",
+			"type":"double"		
+		},
+		
+		"kernel.shmmni": {
+			"name":"kernel.shmmni",
+			"type":"int"		
+		},
+		
+		"kernel.sched_latency_ns": {
+			"name":"kernel.sched_latency_ns",
+			"type":"double"
+		},
+		
+		"kernel.sched_migration_cost_ns": {
+			"name":"kernel.sched_migration_cost_ns",
+			"type":"double"
+		},
+		
+		"kernel.sched_min_granularity_ns": {
+			"name":"kernel.sched_min_granularity_ns",
+			"type":"double"
+		},
+		
+		"kernel.sched_nr_migrate": {
+			"name":"kernel.sched_nr_migrate",
+			"type":"int"
+		},
+		
+		"kernel.sched_rr_timeslice_ms": {
+			"name":"kernel.sched_rr_timeslice_ms",
+			"type":"int"
+		},
+		
+		"kernel.sched_rt_period_us": {
+			"name":"kernel.sched_rt_period_us",
+			"type":"int"
+		},
+		
+		"kernel.sched_rt_runtime_us":{
+			"name":"kernel.sched_rt_runtime_us",
+			"type":"int"		
+		},
+		
+		"kernel.sched_schedstats": {
+			"name":"kernel.sched_schedstats",
+			"type":"int"		
+		},
+		
+		"kernel.numa_balancing": {
+			"name":"kernel.numa_balancing",
+			"type":"int"		
+		},
+		
+		"kernel.numa_balancing_scan_delay_ms": {
+			"name":"kernel.numa_balancing_scan_delay_ms",
+			"type":"int"		
+		},
+		
+		"kernel.numa_balancing_scan_period_max_ms": {
+			"name":"kernel.numa_balancing_scan_period_max_ms",
+			"type":"int"		
+		},
+		
+		"kernel.numa_balancing_scan_period_min_ms": {
+			"name":"kernel.numa_balancing_scan_period_min_ms",
+			"type":"int"		
+		},
+		
+		"kernel.numa_balancing_scan_size_mb": {
+			"name":"kernel.numa_balancing_scan_size_mb",
+			"type":"int"		
+		}
+		
+	},
+	
+	"net":{
+		"net.core.dev_weight": {
+			"name":"net.core.dev_weight",
+			"type":"int"		
+		},
+		
+		"net.core.optmem_max": {
+			"name":"net.core.optmem_max",
+			"type":"int"		
+		},
+		
+		"net.core.rmem_default": {
+			"name":"net.core.rmem_default",
+			"type":"int"		
+		},
+		
+		"net.core.rmem_max": {
+			"name":"net.core.rmem_max",
+			"type":"int"		
+		},
+		
+		"net.core.wmem_default": {
+			"name":"net.core.wmem_default",
+			"type":"int"		
+		},
+		
+		"net.core.wmem_max": {
+			"name":"net.core.wmem_max",
+			"type":"int"		
+		},
+		
+		"net.core.netdev_budget": {
+			"name":"net.core.netdev_budget",
+			"type":"int"		
+		},
+		
+		"net.core.netdev_budget_usecs": {
+			"name":"net.core.netdev_budget_usecs",
+			"type":"int"		
+		},
+		
+		"net.core.netdev_max_backlog": {
+			"name":"net.core.netdev_max_backlog",
+			"type":"int"		
+		}
+	},
+	
+		
+	"ipv4":{
+		"net.ipv4.icmp_msgs_per_sec": {
+			"name":"net.ipv4.icmp_msgs_per_sec",
+			"type":"int"		
+		},
+		
+		"net.ipv4.icmp_ratelimit": {
+			"name":"net.ipv4.icmp_ratelimit",
+			"type":"int"		
+		},
+		
+		"net.ipv4.icmp_ratemask": {
+			"name":"net.ipv4.icmp_ratemask",
+			"type":"int"		
+		},
+		
+		"net.ipv4.tcp_min_rtt_wlen": {
+			"name":"net.ipv4.tcp_min_rtt_wlen",
+			"type":"int"		
+		},
+		
+		"net.ipv4.route.max_size": {
+			"name":"net.ipv4.route.max_size",
+			"type":"int"		
+		},
+		
+		"net.ipv4.route.redirect_load": {
+			"name":"net.ipv4.route.redirect_load",
+			"type":"int"		
+		},
+		
+		"net.ipv4.route.redirect_number": {
+			"name":"net.ipv4.route.redirect_number",
+			"type":"int"		
+		},
+		
+		"net.ipv4.route.redirect_silence": {
+			"name":"net.ipv4.route.redirect_silence",
+			"type":"int"		
+		},
+		
+		"net.ipv4.tcp_retries1": {
+			"name":"net.ipv4.tcp_retries1",
+			"type":"int"		
+		},
+		
+		"net.ipv4.tcp_retries2": {
+			"name":"net.ipv4.tcp_retries2",
+			"type":"int"		
+		}
+	},	
+	
+		
+	"ipv6":{
+		"net.ipv6.bindv6only": {
+			"name":"net.ipv6.bindv6only",
+			"type":"int"		
+		},
+		
+		"net.ipv6.ip6frag_high_thresh": {
+			"name":"net.ipv6.ip6frag_high_thresh",
+			"type":"int"		
+		},
+		
+		"net.ipv6.ip6frag_low_thresh": {
+			"name":"net.ipv6.ip6frag_low_thresh",
+			"type":"int"		
+		},
+		
+		"net.ipv6.ip6frag_time": {
+			"name":"net.ipv6.ip6frag_time",
+			"type":"int"		
+		},
+		
+		"net.ipv6.conf.default.accept_source_route": {
+			"name":"net.ipv6.conf.default.accept_source_route",
+			"type":"int"		
+		},
+		
+		"net.ipv6.conf.default.mtu": {
+			"name":"net.ipv6.conf.default.mtu",
+			"type":"int"		
+		}
+	},
+
+	"vm":{
+		"vm.extfrag_threshold": {
+			"name":"vm.extfrag_threshold",
+			"type":"int"		
+		},
+		
+		"vm.swappines": {
+			"name":"vm.swappines",
+			"type":"int"
+		},
+		
+		"vm.nr_hugepages": {
+			"name":"vm.nr_hugepages",
+			"type":"int"
+		},
+		
+		"vm.nr_hugepages_mempolicy": {
+			"name":"vm.nr_hugepages_mempolicy",
+			"type":"int"
+		},
+		
+		"vm.nr_overcommit_hugepages": {
+			"name":"vm.nr_overcommit_hugepages",
+			"type":"int"		
+		}
+	}
+}
