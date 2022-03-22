@@ -2,104 +2,155 @@
 	"filesystem":{
 		"fs.nr_open": {
 			"name":"fs.nr_open",
-			"type":"int"		
+			"type":"double",		
+			"value": 1048576,
+			"default":1048576,
+			"range":[0, 1048576]
 		},
 		
 		"fs.file-max": {
 			"name":"fs.file-max",
-			"type":"int"		
+			"type":"double",		
+			"value": 9223372036854775807,
+			"default":9223372036854775807,
+			"range":[9000000000000000000, 9223372036854775807]		
 		},
 		
 		"fs.file-nr": {
 			"name":"fs.file-nr",
-			"type":"list"		
+			"type":"list",		
+			"value": [12987, 0, 9223372036854775807],
+			"default":[12987, 0, 9223372036854775807],
+			"range":[10, 63]
 		}
 	},
 	
 	"kernel":{
 		"kernel.sem": {
 			"name":"kernel.sem",
-			"type":"list"	
+			"type":"list",		
+			"value": [32000, 1024000000, 500, 32000],
+			"default":[32000, 1024000000, 500, 32000],
+			"range":""
 		},
 		
 		"kernel.shmall": {
 			"name":"kernel.shmall",
-			"type":"double"
+			"type":"double",		
+			"value": 18446744073692774399,
+			"default":18446744073692774399,
+			"range":[9000000000000000000, 9223372036854775808]
 		},
 		
 		"kernel.shmmax": {
 			"name":"kernel.shmmax",
-			"type":"double"		
+			"type":"double",		
+			"value": 18446744073692774399,
+			"default":18446744073692774399,
+			"range":[9223372036854775808, 18446744073709551615]
 		},
 		
 		"kernel.shmmni": {
 			"name":"kernel.shmmni",
-			"type":"int"		
+			"type":"double",		
+			"value": 4096,
+			"default":4096,
+			"range":[1024, 16384]	
 		},
 		
 		"kernel.sched_latency_ns": {
 			"name":"kernel.sched_latency_ns",
-			"type":"double"
+			"type":"double",		
+			"value": 0,
+			"default":24000000,
+			"range":[12000000, 96000000]
 		},
 		
 		"kernel.sched_migration_cost_ns": {
 			"name":"kernel.sched_migration_cost_ns",
-			"type":"double"
+			"type":"double",		
+			"value": 0,
+			"default":500000,
+			"range":[100000, 2000000]
 		},
 		
 		"kernel.sched_min_granularity_ns": {
 			"name":"kernel.sched_min_granularity_ns",
-			"type":"double"
+			"type":"double",		
+			"value": 0,
+			"default":3000000,
+			"range":[1000000, 12000000]
 		},
 		
 		"kernel.sched_nr_migrate": {
 			"name":"kernel.sched_nr_migrate",
-			"type":"int"
+			"type":"double",		
+			"value": 0,
+			"default":32,
+			"range":[8, 128]
 		},
 		
 		"kernel.sched_rr_timeslice_ms": {
 			"name":"kernel.sched_rr_timeslice_ms",
-			"type":"int"
+			"type":"double",		
+			"value": 0,
+			"default":100,
+			"range":[10, 1000]
 		},
 		
 		"kernel.sched_rt_period_us": {
 			"name":"kernel.sched_rt_period_us",
-			"type":"int"
+			"type":"double",		
+			"value": 0,
+			"default":1000000,
+			"range":[100000, 10000000]
 		},
 		
 		"kernel.sched_rt_runtime_us":{
 			"name":"kernel.sched_rt_runtime_us",
-			"type":"int"		
-		},
-		
-		"kernel.sched_schedstats": {
-			"name":"kernel.sched_schedstats",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":950000,
+			"range":[422500, 9500000]
 		},
 		
 		"kernel.numa_balancing": {
 			"name":"kernel.numa_balancing",
-			"type":"int"		
+			"type":"bool",		
+			"value": 0,
+			"default":0		
 		},
 		
 		"kernel.numa_balancing_scan_delay_ms": {
 			"name":"kernel.numa_balancing_scan_delay_ms",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":1000,
+			"range":[100, 10000]		
 		},
 		
 		"kernel.numa_balancing_scan_period_max_ms": {
 			"name":"kernel.numa_balancing_scan_period_max_ms",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":60000,
+			"range":[10000, 600000]		
 		},
 		
 		"kernel.numa_balancing_scan_period_min_ms": {
 			"name":"kernel.numa_balancing_scan_period_min_ms",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":1000,
+			"range":[100, 10000]		
 		},
 		
 		"kernel.numa_balancing_scan_size_mb": {
 			"name":"kernel.numa_balancing_scan_size_mb",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":256,
+			"range":[32, 2048]		
 		}
 		
 	},
@@ -107,47 +158,74 @@
 	"net":{
 		"net.core.dev_weight": {
 			"name":"net.core.dev_weight",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":64,
+			"range":[8, 1024]		
 		},
 		
 		"net.core.optmem_max": {
 			"name":"net.core.optmem_max",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":10,
+			"range":[1, 3600]		
 		},
 		
 		"net.core.rmem_default": {
 			"name":"net.core.rmem_default",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":212992,
+			"range":[53248, 425984]		
 		},
 		
 		"net.core.rmem_max": {
 			"name":"net.core.rmem_max",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":212992,
+			"range":[212992, 425984]		
 		},
 		
 		"net.core.wmem_default": {
 			"name":"net.core.wmem_default",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":212992,
+			"range":[53248, 425984]	
 		},
 		
 		"net.core.wmem_max": {
 			"name":"net.core.wmem_max",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":212992,
+			"range":[212992, 425984]		
 		},
 		
 		"net.core.netdev_budget": {
 			"name":"net.core.netdev_budget",
-			"type":"int"		
+			"type":"double",
+			"value": 0,
+			"default":300,
+			"range":[100, 900]		
 		},
 		
 		"net.core.netdev_budget_usecs": {
 			"name":"net.core.netdev_budget_usecs",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":8000,
+			"range":[901, 24000]		
 		},
 		
 		"net.core.netdev_max_backlog": {
 			"name":"net.core.netdev_max_backlog",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":1000,
+			"range":[100, 10000]		
 		}
 	},
 	
@@ -155,52 +233,82 @@
 	"ipv4":{
 		"net.ipv4.icmp_msgs_per_sec": {
 			"name":"net.ipv4.icmp_msgs_per_sec",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":1000,
+			"range":[0, 10000]		
 		},
 		
 		"net.ipv4.icmp_ratelimit": {
 			"name":"net.ipv4.icmp_ratelimit",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":1000,
+			"range":[0, 10000]		
 		},
 		
 		"net.ipv4.icmp_ratemask": {
 			"name":"net.ipv4.icmp_ratemask",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":6168,
+			"range":[4120, 131071]		
 		},
 		
 		"net.ipv4.tcp_min_rtt_wlen": {
 			"name":"net.ipv4.tcp_min_rtt_wlen",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":300,
+			"range":[60, 14400]		
 		},
 		
 		"net.ipv4.route.max_size": {
 			"name":"net.ipv4.route.max_size",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":2147483647,
+			"range":[715827882, 6442450941]		
 		},
 		
 		"net.ipv4.route.redirect_load": {
 			"name":"net.ipv4.route.redirect_load",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":5,
+			"range":[1, 10]		
 		},
 		
 		"net.ipv4.route.redirect_number": {
 			"name":"net.ipv4.route.redirect_number",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":9,
+			"range":[]		
 		},
 		
 		"net.ipv4.route.redirect_silence": {
 			"name":"net.ipv4.route.redirect_silence",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":5120,
+			"range":[2560, 15360]		
 		},
 		
 		"net.ipv4.tcp_retries1": {
 			"name":"net.ipv4.tcp_retries1",
-			"type":"int"		
+			"type":"double",
+			"value": 0,
+			"default":3,
+			"range":[3, 9]	
 		},
 		
 		"net.ipv4.tcp_retries2": {
 			"name":"net.ipv4.tcp_retries2",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":15,
+			"range":[8, 30]		
 		}
 	},	
 	
@@ -208,59 +316,90 @@
 	"ipv6":{
 		"net.ipv6.bindv6only": {
 			"name":"net.ipv6.bindv6only",
-			"type":"int"		
+			"type":"boolean",		
+			"value": 0,
+			"default":0
 		},
 		
 		"net.ipv6.ip6frag_high_thresh": {
 			"name":"net.ipv6.ip6frag_high_thresh",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":4194304,
+			"range":[3670016, 12582912]
 		},
 		
 		"net.ipv6.ip6frag_low_thresh": {
 			"name":"net.ipv6.ip6frag_low_thresh",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":3145728,
+			"range":[1572864, 3670015]
 		},
 		
 		"net.ipv6.ip6frag_time": {
 			"name":"net.ipv6.ip6frag_time",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":60,
+			"range":[10, 300]
 		},
 		
 		"net.ipv6.conf.default.accept_source_route": {
 			"name":"net.ipv6.conf.default.accept_source_route",
-			"type":"int"		
+			"type":"boolean",		
+			"value": 0,
+			"default":0
 		},
 		
 		"net.ipv6.conf.default.mtu": {
 			"name":"net.ipv6.conf.default.mtu",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":1280,
+			"range":[320, 2560]
 		}
 	},
 
 	"vm":{
 		"vm.extfrag_threshold": {
 			"name":"vm.extfrag_threshold",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":500,
+			"range":[0, 1000]
 		},
 		
 		"vm.swappines": {
 			"name":"vm.swappines",
-			"type":"int"
+			"type":"double",		
+			"value": 0,
+			"default":60,
+			"range":[10, 200]
 		},
 		
 		"vm.nr_hugepages": {
 			"name":"vm.nr_hugepages",
-			"type":"int"
+			"type":"double",		
+			"value": 0,
+			"default":0,
+			"range":[0, 1024]
 		},
 		
 		"vm.nr_hugepages_mempolicy": {
 			"name":"vm.nr_hugepages_mempolicy",
-			"type":"int"
+			"type":"double",		
+			"value": 0,
+			"default":0,
+			"range":[0, 1024]
 		},
 		
 		"vm.nr_overcommit_hugepages": {
 			"name":"vm.nr_overcommit_hugepages",
-			"type":"int"		
+			"type":"double",		
+			"value": 0,
+			"default":0,
+			"range":[0, 2048]
 		}
 	}
 }

@@ -1,270 +1,317 @@
 {
-	"CONFIG_KERNEL_CompType":{
-		
-		"name":"", 
-		"type":"",
+	"CONFIG_KERNEL_GZIP": {
+
+		"name":"CONFIG_KERNEL_GZIP",
+		"type":"bool",
 		"value": "",
-		"default":"",
+		"default":"n",
+		"exclude":["CONFIG_KERNEL_BZIP2", "CONFIG_KERNEL_LZMA", "CONFIG_KERNEL_XZ", "CONFIG_KERNEL_LZO", "CONFIG_KERNEL_LZ4", "CONFIG_KERNEL_ZSTD"]
+			
+	},
+		
+	"CONFIG_KERNEL_BZIP2": {
+
+		"name":"CONFIG_KERNEL_BZIP2",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_KERNEL_GZIP", "CONFIG_KERNEL_LZMA", "CONFIG_KERNEL_XZ", "CONFIG_KERNEL_LZO", "CONFIG_KERNEL_LZ4", "CONFIG_KERNEL_ZSTD"]
+	},
+		
+	"CONFIG_KERNEL_LZMA": {
+			
+		"name":"CONFIG_KERNEL_LZMA",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_KERNEL_GZIP", "CONFIG_KERNEL_BZIP2", "CONFIG_KERNEL_XZ", "CONFIG_KERNEL_LZO", "CONFIG_KERNEL_LZ4", "CONFIG_KERNEL_ZSTD"]
+	},
+		
+	"CONFIG_KERNEL_XZ": {
+ 
+		"name":"CONFIG_KERNEL_XZ",
+		"type":"bool",
+		"value": "",
+		"default":"y",
+		"exclude":["CONFIG_KERNEL_GZIP", "CONFIG_KERNEL_BZIP2", "CONFIG_KERNEL_LZMA", "CONFIG_KERNEL_LZO", "CONFIG_KERNEL_LZ4", "CONFIG_KERNEL_ZSTD"]
+	},
+		
+	"CONFIG_KERNEL_LZO": {
+
+		"name":"CONFIG_KERNEL_LZO",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_KERNEL_GZIP", "CONFIG_KERNEL_BZIP2", "CONFIG_KERNEL_LZMA", "CONFIG_KERNEL_XZ", "CONFIG_KERNEL_LZ4", "CONFIG_KERNEL_ZSTD"]
+	},
+		
+	"CONFIG_KERNEL_LZ4": {
+
+		"name":"CONFIG_KERNEL_LZ4",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_KERNEL_GZIP", "CONFIG_KERNEL_BZIP2", "CONFIG_KERNEL_LZMA", "CONFIG_KERNEL_XZ", "CONFIG_KERNEL_LZO", "CONFIG_KERNEL_ZSTD"]
+	},
+		
+	"CONFIG_KERNEL_ZSTD": {
+			 
+		"name":"CONFIG_KERNEL_ZSTD",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_KERNEL_GZIP", "CONFIG_KERNEL_BZIP2", "CONFIG_KERNEL_LZMA", "CONFIG_KERNEL_XZ", "CONFIG_KERNEL_LZO", "CONFIG_KERNEL_LZ4"]
+	},
+		
 	
-		"CONFIG_KERNEL_GZIP": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
+	"CONFIG_PREEMPT_BUILD":{
 		
-		"CONFIG_KERNEL_BZIP2": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_KERNEL_LZMA": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_KERNEL_XZ": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_KERNEL_LZO": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_KERNEL_LZ4": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_KERNEL_LZ4": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_KERNEL_ZSTD": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		}
+		"name":"CONFIG_PREEMPT_BUILD",
+		"type":"bool",
+		"value":"",
+		"default":"y",
+		"exclude":""
 	},
 	
-	"CONFIG_PREEMPT":{
-	
-		"CONFIG_PREEMPT_NONE": {
-			"name":"", 
-			"type":"",
-			"default":""
-		},
+	"CONFIG_PREEMPT_NONE": {
+			 
+		"name":"CONFIG_PREEMPT_NONE",
+		"type":"bool",
+		"value":"",
+		"default":"n",
+		"exclude":["CONFIG_PREEMPT_VOLUNTARY", "CONFIG_PREEMPT"]
+	},
 		
-		"CONFIG_PREEMPT_VOLUNTARY": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_PREEMPT": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		}
+	"CONFIG_PREEMPT_VOLUNTARY": {
 
+		"name":"CONFIG_PREEMPT_VOLUNTARY",		 
+		"type":"bool",
+		"value": "",
+		"default":"y",
+		"exclude":["CONFIG_PREEMPT_VOLUNTARY", "CONFIG_PREEMPT"]
+	},
+		
+	"CONFIG_PREEMPT": {
+
+		"name":"CONFIG_PREEMPT",			 
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_PREEMPT_NONE", "CONFIG_PREEMPT_VOLUNTARY"]
 	},
 	
 	"CONFIG_PREEMPT_DYNAMIC": {
-		"name":"", 
-		"type":"",
+
+		"name":"CONFIG_PREEMPT_DYNAMIC",	 
+		"type":"bool",
 		"value": "",
-		"default":""
+		"default":"y",
+		"exclude":""
 	},
 	
 	
 	"CONFIG_CROSS_MEMORY_ATTACH": {
-		"name":"", 
-		"type":"",
+
+		"name":"CONFIG_CROSS_MEMORY_ATTACH",	 
+		"type":"bool",
 		"value": "",
-		"default":""
+		"default":"y",
+		"exclude":""
+	},
+
+	"CONFIG_HZ_PERIODIC": {
+		 
+		"name":"CONFIG_HZ_PERIODIC",
+		"type":"bool",
+		"value": "",
+		"default":"y",
+		"exclude":["CONFIG_HZ_PERIODIC", "CONFIG_NO_HZ_IDLE", "CONFIG_NO_HZ_FULL"]
 	},
 	
-	"Timers_subsystem": {
-		
-		"Tick_handling": {
-			"CONFIG_HZ_PERIODIC": {
-				"name":"", 
-				"type":"",
-				"value": "",
-				"default":""
-			},
-			
-			"CONFIG_NO_HZ_IDLE": {
-				"name":"", 
-				"type":"",
-				"value": "",
-				"default":""
-			},
-			
-			"CONFIG_NO_HZ_FULL": {
-				"name":"", 
-				"type":"",
-				"value": "",
-				"default":""
-			}
-		},
-		
-		"CONFIG_NO_HZ": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_HIGH_RES_TIMERS": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		}
-		
+	"CONFIG_NO_HZ_IDLE": {
+		 
+		"name":"CONFIG_NO_HZ_IDLE",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_HZ_PERIODIC", "CONFIG_NO_HZ_IDLE", "CONFIG_NO_HZ_FULL"]
 	},
+	
+	"CONFIG_NO_HZ_FULL": {
+		 
+		"name":"CONFIG_NO_HZ_FULL",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_HZ_PERIODIC", "CONFIG_NO_HZ_IDLE", "CONFIG_NO_HZ_FULL"]
+	},
+	
+	"CONFIG_HIGH_RES_TIMERS": {
+		
+		"name":"CONFIG_HIGH_RES_TIMERS",
+		"type":"bool",
+		"value": "",
+		"default":"y",
+		"exclude":""
+	},
+	
 	
 	"CONFIG_RCU_EXPERT": {
-		"name":"", 
-		"type":"",
+		 
+		"name":"CONFIG_RCU_EXPERT", 
+		"type":"bool",
 		"value": "",
-		"default":"",
+		"default":"n",
 		
-		"CONFIG_RCU_FANOUT": {
-			"name":"",
-			"type":"",
-			"value": "",
-			"default":"",
-			"range": [2, 64]
-		},
+		"exclude":["CONFIG_RCU_FANOUT", "CONFIG_RCU_FANOUT_LEAF", "CONFIG_RCU_FAST_NO_HZ", "CONFIG_RCU_BOOST", "CONFIG_RCU_NOCB_CPU"]
+	},
 		
-		"CONFIG_RCU_FANOUT_LEAF": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":"",
-			"range": [2, 64]
-		},
+	"CONFIG_RCU_FANOUT": {
 		
-		"CONFIG_RCU_FAST_NO_HZ": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
+		"name":"CONFIG_RCU_FANOUT",
+		"type":"int",
+		"value": "",
+		"default":"64",
+		"range": [2, 64]
 		
-		"CONFIG_RCU_BOOST": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
+	},
 		
-		"CONFIG_RCU_NOCB_CPU": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		}
+	"CONFIG_RCU_FANOUT_LEAF": {
+		
+		"name":"CONFIG_RCU_FANOUT_LEAF", 
+		"type":"int",
+		"value": "",
+		"default":"16",
+		"range": [2, 64]
+	},
+		
+	"CONFIG_RCU_FAST_NO_HZ": {
+		
+		"name":"CONFIG_RCU_FAST_NO_HZ",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":""
 	},
 	
-	"SLUB_allocator": {
-		"CONFIG_SLAB": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
+	"CONFIG_RCU_BOOST": {
+
+		"name":"CONFIG_RCU_BOOST",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":""
+	},
 		
-		"CONFIG_SLUB": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
-		
-		"CONFIG_SLOB": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		}
+	"CONFIG_RCU_NOCB_CPU": {
+
+		"name":"CONFIG_RCU_NOCB_CPU",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":""
+	},
+	
+
+
+	"CONFIG_SLAB": {
+
+		"name":"CONFIG_SLAB",			 
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_SLUB", "CONFIG_SLOB"]
+	},
+	
+	"CONFIG_SLUB": {
+
+		"name":"CONFIG_SLUB",
+		"type":"bool",
+		"value": "",
+		"default":"y",
+		"exclude":["CONFIG_SLAB", "CONFIG_SLOB"]
+	},
+	
+	"CONFIG_SLOB": {
+	
+		"name":"CONFIG_SLOB",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_SLAB", "CONFIG_SLUB"]
 	},
 	
 	"CONFIG_SLUB_CPU_PARTIAL": {
-		"name":"", 
-		"type":"",
+		
+		"name":"CONFIG_SLUB_CPU_PARTIAL",
+		"type":"bool",
 		"value": "",
-		"default":""
+		"default":"y",
+		"exclude":""
 	},
 	
-	"Timer_frequency": {
-		"CONFIG_HZ_100": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
+	
+
+	"CONFIG_HZ_100": {
 		
-		"CONFIG_HZ_250": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
+		"name":"CONFIG_HZ_100",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_HZ_250", "CONFIG_HZ_300", "CONFIG_HZ_1000"]
+	},
+	
+	"CONFIG_HZ_250": {
+		 
+		"name":"CONFIG_HZ_250",
+		"type":"bool",
+		"value": "",
+		"default":"y",
+		"exclude":["CONFIG_HZ_100", "CONFIG_HZ_300", "CONFIG_HZ_1000"]
+	},
+	
+	"CONFIG_HZ_300": {
 		
-		"CONFIG_HZ_300": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		},
+		"name":"CONFIG_HZ_300", 
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_HZ_100", "CONFIG_HZ_250", "CONFIG_HZ_1000"]
+	},
+	
+	"CONFIG_HZ_1000": {
 		
-		"CONFIG_HZ_1000": {
-			"name":"", 
-			"type":"",
-			"value": "",
-			"default":""
-		}
+		"name":"CONFIG_HZ_1000",
+		"type":"bool",
+		"value": "",
+		"default":"n",
+		"exclude":["CONFIG_HZ_100", "CONFIG_HZ_250", "CONFIG_HZ_300"]
 	},
 	
 	"CONFIG_SCHED_OMIT_FRAME_POINTER": {
-		"name":"", 
-		"type":"",
+		
+		"name":"CONFIG_SCHED_OMIT_FRAME_POINTER",
+		"type":"bool",
 		"value": "",
-		"default":""
+		"default":"y",
+		"exclude":""
 	},
 	
 	"CONFIG_SCHED_MC": {
-		"name":"", 
-		"type":"",
+		
+		"name":"CONFIG_SCHED_MC",
+		"type":"bool",
 		"value": "",
-		"default":""
+		"default":"y",
+		"exclude":""
 	},
 	
 	"CONFIG_JUMP_LABEL": {
-		"name":"", 
-		"type":"",
+		
+		"name":"CONFIG_JUMP_LABEL",
+		"type":"bool",
 		"value": "",
-		"default":""
+		"default":"y",
+		"exclude":""
 	}
 }

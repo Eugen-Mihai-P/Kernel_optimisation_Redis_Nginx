@@ -1,0 +1,25 @@
+"fs.file-max": {
+			"name":"fs.file-max",
+			"type":"double",		
+			"value": 9223372036854775807,
+			"default":9223372036854775807,
+			"range":[209152, 9223372036854]		
+		},
+		
+		
+"kernel.shmall": {
+			"name":"kernel.shmall",
+			"type":"double",		
+			"value": 18446744073692774399,
+			"default":18446744073692774399,
+			"range":[9000000000000000000, 9223372036854775808]
+		},
+
+		
+"kernel.shmmax": {
+	"name":"kernel.shmmax",
+	"type":"double",		
+	"value": 18446744073692774399,
+	"default":18446744073692774399,
+	"range":[9223372036854775808, 18446744073709551615]
+},
