@@ -7,7 +7,14 @@
 
 
 # script to change configuration file being used
-bash /configs/select_file.sh
+fin="$PWD/finished.txt"
+
+if [ -e $fin ]; then
+	echo "no more configurations" > $fin
+	exit 1
+else
+	bash select__until_empty.sh
+fi
 
 
 # benchmark script (global path)
@@ -18,11 +25,11 @@ python3 /home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Python_Scripts/par
 
 
 # kernel recompilation (add code to copy config file to correct folder)
-make clean
-make
-make modules_install
-make install
+make clean -C /home/qemukvm/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7
+make -C /home/qemukvm/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7
+make modules_install -C /home/qemukvm/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7
+make install -C /home/qemukvm/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7
 
 
 # reboot code
-# sysctl 
+# sysctl

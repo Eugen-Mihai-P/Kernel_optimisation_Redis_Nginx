@@ -7,12 +7,14 @@
 # change to include other apps (nginx)
 
 
+import sys
+argv = sys.argv[1:]
 
 import json
 
 
 substring = "requests per second"
-res = open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Redis_outputs_text/redis_clean_results.txt', 'w')
+res = open(argv[0] + 'redis_clean_results_' + argv[2] + '.txt', 'w+')
 
 
 def clean_output_file(rows):
@@ -44,15 +46,15 @@ def parse_clean_output(rows, dict):
 
 
 # main script
-with open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Redis_outputs_text/redis_bench_results.txt', 'r') as f:
+with open(argv[0] + 'redis_bench_results_' + argv[2] + '.txt', 'r+') as f:
     lines = f.readlines()
 clean_output_file(lines)
 
 
-with open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Redis_outputs_text/redis_clean_results.txt', 'r') as f:
+with open(argv[0] + 'redis_clean_results_' + argv[2] + '.txt', 'r+') as f:
     lines = f.readlines()
 parse_clean_output(lines, data)
 
 
-with open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Redis_outputs_JSON/redis_benchmark.json', 'w') as outfile:
+with open(argv[1] + 'redis_' + argv[2] + '.json', 'w+') as outfile:
     json.dump(data, outfile)
