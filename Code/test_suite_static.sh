@@ -25,4 +25,4 @@ make install
 
 
 # reboot code
-
+# sysctl 
