@@ -41,7 +41,7 @@ def handle_data_type(dict_item):
 		pass
 	if t == "double":
 		exclude_list = []
-		fp = "dynamic_configs/checked_int_" + dict_item["name"] + ".txt"
+		fp = "integer_tracking/checked_int_" + dict_item["name"] + ".txt"
 		exclude_list = list_from_file(fp, exclude_list)
 		
 		for i in range(0, len(exclude_list)):
@@ -53,7 +53,7 @@ def handle_data_type(dict_item):
 		if check != []:
 			val = int(random.choice(check))
 			dict_item["value"] = val
-			write_to_file('dynamic_configs/checked_int_' + dict_item["name"] + '.txt', val, 'a')
+			write_to_file('integer_tracking/checked_int_' + dict_item["name"] + '.txt', val, 'a')
 
 
 def read_trial_no(fp, trials):
@@ -70,6 +70,7 @@ position = list_from_file('current_runtime_param.txt', position)
 for i in range(0, len(position)):
 	l = position[i].split(" ")
 	position[i] = l
+
 	
 try:
 	fp = open('dynamic_configs/checked_int_' + runtime[position[0][0]][position[0][1]]["name"] + '.txt', 'x')
@@ -80,14 +81,13 @@ except:
 	OSError
 
 
-
 trials = []
 trial_no = read_trial_no("trial_no.txt", trials)
 trial_no = int(trial_no)
 
 
 
-if runtime[position[0][0]][position[0][1]]["range"][1] - runtime[position[0][0]][position[0][1]]["range"][0] < 10000:
+if runtime[position[0][0]][position[0][1]]["range"][1] - runtime[position[0][0]][position[0][1]]["range"][0] < 1000:
 	tests = runtime[position[0][0]][position[0][1]]["range"][1] - runtime[position[0][0]][position[0][1]]["range"][0]
 	
 	
@@ -105,7 +105,7 @@ if runtime[position[0][0]][position[0][1]]["range"][1] - runtime[position[0][0]]
 		open('current_runtime_param.txt', 'w').close()
 		
 		for i in position:
-			s = i[0] + " " + i[1]
+			s = i[0] + " " + i[1]			# useful if planning to test a subset
 			write_to_file('current_runtime_param.txt', s, 'a')
 		trial_no = 0
 		write_to_file("trial_no.txt", trial_no, 'w')
@@ -113,7 +113,7 @@ if runtime[position[0][0]][position[0][1]]["range"][1] - runtime[position[0][0]]
 		
 else:
 
-	if int(trial_no) < 10000:
+	if int(trial_no) < 1000:
 		runtime[position[0][0]][position[0][1]]["value"] = runtime[position[0][0]][position[0][1]]["default"]
 	
 		handle_data_type(runtime[position[0][0]][position[0][1]])
@@ -127,10 +127,9 @@ else:
 		open('current_runtime_param.txt', 'w').close()
 	
 		for i in position:
-			s = i[0] + " " + i[1]
+			s = i[0] + " " + i[1]			# useful if planning to test a subset
+			
 			write_to_file('current_runtime_param.txt', s, 'a')
 		trial_no = 0	
 		write_to_file("trial_no.txt", trial_no, 'w')
 
-
-# subprocess.run([""])	# add path to shell script for runtime parameters

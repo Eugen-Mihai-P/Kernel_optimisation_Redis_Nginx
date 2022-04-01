@@ -3,33 +3,49 @@
 # Used to iterate through and test different configurations by calling other scripts
 # TODO: add following scripts
 
+
+wdir=$PWD
 # check for network connection before running
+
+# while the list of dynamic configuration parameters has items run the dynamic config script and reboot (placed before kernel recompilation to repeat until all dynamic options tested with singular static configuration)
+# check values in "current_runtime_param.txt" and repeat above until file empty
+# also remove all files in "integer tracking" folder
+change_dy="$wdir/Python_Scripts/Runtime/current_runtime_param.txt"
+
+
+if [ -s "$change_dy" ]; then
+	bash test_dynamic.sh
+	# reboot code
+	/sbin/reboot
+else
+	python3 "$wdir/Python_Scripts/Runtime/track_param.py"
+fi
+
 
 
 # script to change configuration file being used
-fin="$PWD/finished.txt"
+fin="$wdir/finished.txt"
 
 if [ -e $fin ]; then
 	echo "no more configurations" > $fin
 	exit 1
 else
-	bash select__until_empty.sh
+	bash select_until_empty.sh
 fi
 
 
-# benchmark script (global path)
+# benchmark script (global path?)
 bash benchmark.sh
-
 # result parsing script
 python3 /home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Python_Scripts/parse_results.py
 
 
 # kernel recompilation (add code to copy config file to correct folder)
-make clean -C /home/qemukvm/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7
-make -C /home/qemukvm/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7
-make modules_install -C /home/qemukvm/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7
-make install -C /home/qemukvm/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7
+make clean -C /"$wdir"/linux-5.16.7
+make -C /"$wdir"/linux-5.16.7
+make modules_install -C /"$wdir"/linux-5.16.7
+make install -C /"$wdir"/linux-5.16.7
 
 
 # reboot code
-# sysctl
+/sbin/reboot

@@ -13,7 +13,7 @@ req_no=${2:-1024}	# -n
 data_size=${3:-16}	# -d
 
 # script specific parameters
-test_number=${4:-512}
+test_number=${4:-64}
 wdir=$PWD
 
 
