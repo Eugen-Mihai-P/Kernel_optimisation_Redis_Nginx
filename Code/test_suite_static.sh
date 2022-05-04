@@ -14,7 +14,9 @@ change_dy="$wdir/Python_Scripts/Runtime/current_runtime_param.txt"
 
 
 if [ -s "$change_dy" ]; then
-	bash test_dynamic.sh
+	bash "$wdir"/test_dynamic.sh
+	bash "$wdir"/benchmark.sh
+	
 	# reboot code
 	/sbin/reboot
 else
@@ -26,18 +28,18 @@ fi
 # script to change configuration file being used
 fin="$wdir/finished.txt"
 
-if [ -e $fin ]; then
+if [ -e "$fin" ]; then
 	echo "no more configurations" > $fin
 	exit 1
 else
-	bash select_until_empty.sh
+	bash "$wdir"/select_until_empty.sh
 fi
 
 
 # benchmark script (global path?)
-bash benchmark.sh
+bash "$wdir"/benchmark.sh
 # result parsing script
-python3 /home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Python_Scripts/parse_results.py
+python3 "$wdir"/Python_Scripts/parse_results.py
 
 
 # kernel recompilation (add code to copy config file to correct folder)

@@ -13,13 +13,14 @@ req_no=${2:-1024}	# -n
 data_size=${3:-16}	# -d
 
 # script specific parameters
-test_number=${4:-32}
+test_number=${4:-10}
 wdir=$PWD
 
 
 # path variables
 
 file_c=(configs/*)
+dynamic=$(head -n 1 "$wdir"/Python_Scripts/Runtime/current_runtime_param.txt)
 save_loc_txt=("$wdir"/out_text/)
 save_loc_JSON=("$wdir"/out_JSON/)
 
@@ -47,8 +48,9 @@ function benchmark(){
 	    path_txt="${save_loc_txt}${app}_bench_results_${file_c}.txt"
 	    path_json="${save_loc_json}${app}_bench_results_${file_c}_${i}.data"
 
+	    # TODO change IP
 	    echo "RESULTS SET" $i >> $path_txt
-	    ab -k -n $req -c $conn http://192.168.122.222/ >> $path_txt
+	    ab -k -n $req -c $conn http://localhost/ >> $path_txt
 	    # ab -n $req -c $conn -g $path_json http://192.168.122.222/ >> $path_txt    
         done
     fi

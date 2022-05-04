@@ -7,7 +7,7 @@ files=("$wdir"/configs/*)			#add test for empty folder and run generation script
 
 
 if [ $files != "$wdir/configs/*" ]; then
-	cp "${files[0]}" "/home/"$dir"/Unikernel_optimisation-Lupine-Linux-/Code/linux-5.16.7/.config"	# path to kernel config file
+	cp "${files[0]}" "/home/"$dir"/Project/Code/linux-5.16.7/.config"	# path to kernel config file
 	rm -f $files
 else
 	touch finished.txt

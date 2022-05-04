@@ -2,7 +2,7 @@
 
 
 wdir=$PWD
-run="$wdir"/Python_Scripts/Runtime
+run=("$wdir"/Python_Scripts/Runtime)
 
 
 # if the files tracking tested values and current runtime parameters exists change value
@@ -17,7 +17,7 @@ cd "$wdir"
 
 # read first item of integer_tracking folder, current runtime parameter
 # change configuration accordingly and benchmark
-param="$run"/current_runtime_param.txt
+param=("$run"/current_runtime_param.txt)
 
 if test -f "$param"; then
 	# echo "$param exists "
@@ -32,16 +32,18 @@ if test -f "$param"; then
 	IFS="."
 	read -ra folder_arr <<< "${param_name[1]}"
 	
+	folder="/proc/sys"
+	
 	for i in "${folder_arr[@]}"; do
 		tmp="/$i"
 		folder+=$tmp
 	done
 	
-	# echo "$folder"
+	echo "$folder"
 	# echo "$val"
 	# echo $(cat /proc/sys/"$folder")
 	# TODO check running commands that require admin permission
-	echo "$val" > /proc/sys/"$folder"
+	echo "$val" > "$folder"
 
 fi
 # reboot

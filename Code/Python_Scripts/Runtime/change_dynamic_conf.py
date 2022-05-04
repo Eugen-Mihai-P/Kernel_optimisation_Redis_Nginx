@@ -1,7 +1,7 @@
 # changing dynamic configuration
 import random
 import json
-with open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Parameters_lists_JSON/runtime_params.json') as parameters:
+with open('/home/eugen/Project/Code/Parameters_lists_JSON/runtime_params.json') as parameters:
 	runtime = json.loads(parameters.read())
 
 

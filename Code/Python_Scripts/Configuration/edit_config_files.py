@@ -2,7 +2,7 @@ import json
 import random
 
 
-with open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/Parameters_lists_JSON/compile_time_params.json') as compile_params:
+with open('/home/eugen/Project/Code/Parameters_lists_JSON/compile_time_params.json') as compile_params:
 	exp_space = json.loads(compile_params.read())
 
 
@@ -68,7 +68,7 @@ def handle_data_type(dict_m, dict_item):
 
 
 def edit_config(out, dict_item):
-	f = open("/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/configs/.config_RCU", "r")
+	f = open("/home/eugen/Project/Code/configs/.config_RCU", "r")
 	conf_list = f.readlines()
 	f.close()
 
@@ -111,16 +111,16 @@ for i in exp_space:
 			
 			
 			try:
-				output = open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/configs/config' + exp_space[i]["name"] + str(j), 'x')
+				output = open('/home/eugen/Project/Code/configs/config' + exp_space[i]["name"] + str(j), 'x')
 				output.close()
 			except:
 				OSError
 					
-			output = open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/configs/config' + exp_space[i]["name"] + str(j), 'w')
+			output = open('/home/eugen/Project/Code/configs/config' + exp_space[i]["name"] + str(j), 'w')
 			edit_config(output, exp_space[i])
 
 
 	handle_data_type(exp_space, exp_space[i])
 
-	output = open('/home/eugen/Unikernel_optimisation-Lupine-Linux-/Code/configs/.config' + exp_space[i]["name"], 'w')
+	output = open('/home/eugen/Project/configs/.config' + exp_space[i]["name"], 'w')
 	edit_config(output, exp_space[i])
