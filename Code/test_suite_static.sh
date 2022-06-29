@@ -43,10 +43,18 @@ python3 "$wdir"/Python_Scripts/parse_results.py
 
 
 # kernel recompilation (add code to copy config file to correct folder)
-make clean -C /"$wdir"/linux-5.16.7
-make -C /"$wdir"/linux-5.16.7
-make modules_install -C /"$wdir"/linux-5.16.7
-make install -C /"$wdir"/linux-5.16.7
+cp -v /boot/config-$(uname -r) /"$wdir"/linux-5.16.7/.config
+make localmodconfig
+make bzImage
+make modules && make modules_install
+make install
+update-grub
+
+
+# make clean -C /"$wdir"/linux-5.16.7
+# make -C /"$wdir"/linux-5.16.7
+# make modules_install -C /"$wdir"/linux-5.16.7
+# make install -C /"$wdir"/linux-5.16.7
 
 
 # reboot code
